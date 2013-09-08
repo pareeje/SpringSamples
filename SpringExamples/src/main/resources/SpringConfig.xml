@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="personName" class="com.paromita.springexamples.PersonName">
+		<property name="appRef" ref="helloBean">
+		</property>
+	</bean>
+	<bean id="helloBean" class="com.paromita.springexamples.App">
+		<property name="msg" value="Paromita" />
+	</bean>
+ 
+</beans>
