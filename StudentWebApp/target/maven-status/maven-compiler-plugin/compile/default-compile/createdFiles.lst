@@ -1,0 +1,6 @@
+com\paromita\model\Student.class
+com\paromita\dao\StudentDao.class
+com\paromita\dao\impl\StudentDaoImpl.class
+com\paromita\service\impl\StudentServiceImpl.class
+com\paromita\service\StudentService.class
+com\paromita\controller\StudentController.class
