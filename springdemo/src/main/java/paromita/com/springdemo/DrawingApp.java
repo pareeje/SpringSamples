@@ -1,9 +1,7 @@
 package paromita.com.springdemo;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
 
 /**
  * Hello world!
@@ -18,5 +16,8 @@ public class DrawingApp
 				"spring.xml");
         Triangle triangle = (Triangle)context.getBean("triangle");
         triangle.draw();
+        
+        GeoTriangle geoTriangle = (GeoTriangle)context.getBean("geoTriangle");
+        geoTriangle.draw();
     }
 }

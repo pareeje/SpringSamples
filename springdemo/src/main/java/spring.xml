@@ -8,5 +8,22 @@
 		<property name="msg" value="Triangle Drawn" />
 		<constructor-arg value="RightAngled" />
 	</bean>
+	<bean id="geoTriangle" class="paromita.com.springdemo.GeoTriangle">
+		<property name="pointA" ref="zeroPoint" />
+		<property name="pointB" ref="onePoint" />
+		<property name="pointC" ref="twoPoint" />
+	</bean>
+	<bean id="zeroPoint" class="paromita.com.springdemo.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="onePoint" class="paromita.com.springdemo.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="twoPoint" class="paromita.com.springdemo.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
 
 </beans>
