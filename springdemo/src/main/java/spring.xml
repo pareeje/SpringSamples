@@ -5,7 +5,8 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="triangle" class="paromita.com.springdemo.Triangle">
-		<property name="msg" value="Drawing a Triangle" />
+		<property name="msg" value="Triangle Drawn" />
+		<constructor-arg value="RightAngled" />
 	</bean>
 
 </beans>
