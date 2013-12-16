@@ -1,6 +1,9 @@
 package paromita.com.springdemo;
 
-public class Triangle {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Triangle implements InitializingBean,DisposableBean {
 	
 	private String msg;
 	private String type;
@@ -25,7 +28,15 @@ public class Triangle {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
 	
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initialize called.");
+	}
 	
+	public void destroy() throws Exception {
+		System.out.println("Destroy called.");
+		
+	}
 
 }
