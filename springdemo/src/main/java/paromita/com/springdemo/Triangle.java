@@ -31,12 +31,19 @@ public class Triangle implements InitializingBean,DisposableBean {
 
 	
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Initialize called.");
+		System.out.println("InitializingBean Initialize called for Triangle.");
 	}
 	
 	public void destroy() throws Exception {
-		System.out.println("Destroy called.");
+		System.out.println("DisposableBean Destroy called for Triangle.");
 		
 	}
 
+	public void myInit(){
+		System.out.println("My init method called for Triangle.");
+	}
+	
+	public void cleanUp(){
+		System.out.println("My cleanup method called for Triangle.");
+	}
 }

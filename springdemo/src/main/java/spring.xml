@@ -2,13 +2,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" 
+	default-init-method="myInit"
+	default-destroy-method="cleanUp">
 
 	<bean id="triangle" class="paromita.com.springdemo.Triangle">
 		<property name="msg" value="Triangle Drawn" />
 		<constructor-arg value="RightAngled" />
 	</bean>
-	<bean id="geoTriangle" class="paromita.com.springdemo.GeoTriangle" init-method="myInit">
+	<bean id="geoTriangle" class="paromita.com.springdemo.GeoTriangle" >
 		<property name="pointA" ref="zeroPoint" />
 		<property name="pointB" ref="onePoint" />
 		<property name="pointC" ref="twoPoint" />
